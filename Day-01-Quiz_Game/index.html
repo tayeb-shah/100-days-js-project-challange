@@ -1,53 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Quiz Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        // start screen will be active by default
-        <div class="screen active" id="start-screen">
-            <h1>Quiz Time!</h1>
-            <p>Test your knowledge with this fun quiz!</p>
-            <button id="start-btn">Start Quiz</button>
+      <!-- start screen will be active by default -->
+      <div class="screen active" id="start-screen">
+        <h1>Quiz Time!</h1>
+        <p>Test your knowledge with this fun quiz!</p>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
+
+      <!-- quiz screen -->
+      <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+          <h2 class="question-text">Questions will appear here</h2>
+          <div class="quiz-info">
+            <p>
+              Question: <span id="current-question">0</span> of
+              <span id="total-questions">5</span>
+            </p>
+
+            <p>Score: <span id="score">0</span></p>
+          </div>
         </div>
 
-        // quiz screen
-        <div class="screen" id="quiz-screen">
-            <h2>Questions will appear here</h2>
-            <div class="scoreboard">
-                <p>
-                    Question: <span id="current-question">0</span> of <span id="total-questions">5</span>
-                </p>
-
-                <p>
-                    Score: <span id="score">0</span>
-                </p>
-            </div>
-
-            <div class="answer-container" id="answer-container">
-                <!-- Answer Buttons will appear here in some point -->
-            </div>
-
-            <div id="progress-bar" class="progress-bar">
-                <div class="progress"></div>
-            </div>
+        <div class="answer-container" id="answer-container">
+          <!-- Answer Buttons will appear here in some point -->
+           <button class="answer-btn incorrect">A is a good boy</button>
+           <button class="answer-btn">B is a good boy</button>
+           <button class="answer-btn correct">C is a good boy</button>
+           <button class="answer-btn">D is a good boy</button>
         </div>
 
-        // result screen
-        <div class="screen" id="result-screen">
-            <h1>Quiz Result</h1>
-            <div id="result-info">
-                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
-                <div class="result-message" id="result-message"></div>
-            </div>
-            <button id="restart-btn">Restart Quiz</button>
+        <div id="progress-bar" class="progress-bar">
+          <div class="progress"></div>
         </div>
+      </div>
+
+      <!-- result screen -->
+      <div class="screen" id="result-screen">
+        <h1>Quiz Result</h1>
+        <div id="result-info">
+          <p>
+            You scored <span id="final-score">0</span> out of
+            <span id="max-score">5</span>
+          </p>
+          <div class="result-message" id="result-message">Good job!Keep learning!</div>
+        </div>
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
